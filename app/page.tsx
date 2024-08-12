@@ -1,113 +1,248 @@
+import Link from "next/link";
 import Image from "next/image";
+
+import Header from "@/app/(components)/HeaderComponent";
+import Footer from "@/app/(components)/FooterComponent";
+import heroImg from "@/public/images/hero_image.jpg";
+import originsImg from "@/public/images/origins_of_the_view.jpg";
+import fitnessImg from "@/public/images/fitness_and_wellness.jpg";
+import culinaryImg from "@/public/images/culinary.jpg";
+import adventureImg from "@/public/images/adventures_and_events.jpg";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
+    <>
+      <Header />
+      <header className="relative w-full h-[100vh] flex justify-center">
+        <main className="absolute z-10 flex flex-col justify-center items-center text-center w-full font-cinzelDec text-white h-full">
+          <div>
+            <h4 className="text-base md:text-lg md:text-left">
+              WELCOME TO THE
+            </h4>
+            <h1 className="text-7xl md:text-8xl">
+              Grand
+              <br className="md:hidden" />
+              View
+            </h1>
+            <h4 className="text-base md:text-lg md:text-right">
+              HOTEL & SUITES
+            </h4>
+          </div>
+
+          <div className="flex flex-col md:flex-row md:justify-evenly mt-10 w-[50%] md:w-full">
+            <Link
+              href="/rooms"
+              className="font-cinzelDec p-3 hover:bg-black/30 border-b text-sm md:text-lg flex items-center justify-between my-3 transition-all"
+            >
+              <p>BOOK A ROOM</p>
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                className="ml-1"
+                height="16"
+                width="16"
+              >
+                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" />
+              </svg>
+            </Link>
+
+            <Link
+              href="/signup"
+              className="font-cinzelDec p-3 hover:bg-black/30 border-b text-sm md:text-lg flex items-center justify-between my-3 transition-all"
+            >
+              <p>SIGN UP</p>
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                className="ml-1"
+                height="16"
+                width="16"
+              >
+                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" />
+              </svg>
+            </Link>
+          </div>
+        </main>
+        <Image
+          src={heroImg}
+          alt="Aerial view of Grandview Hotel and Suites"
+          priority={true}
+          fill
+          style={{ objectFit: "cover" }}
+        />
+        <div className="bg-black opacity-55 w-full h-full"></div>
+      </header>
+
+      <div className="text-slate-600 flex flex-col justify-center items-center px-10 py-16">
+        <h1 className="font-cinzelDec -tracking-[0.1em]">
+          ORIGINS OF THE VIEW
+        </h1>
+        <p className="font-sans mt-3 text-center">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+          explicabo sequi laboriosam illo, perspiciatis commodi aperiam ex
+          ducimus similique, iure non autem, quisquam doloribus soluta mollitia
+          est dolores ratione cupiditate? Lorem ipsum dolor sit, amet
+          consectetur adipisicing elit. Tenetur maxime cumque sunt eos facilis
+          exercitationem quos debitis, eius sint nesciunt temporibus veritatis
+          omnis molestiae, labore enim dolor dolorum ex voluptas.
         </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
+        <div className="my-3"></div>
+        <p className="font-sans text-center">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur
+          consectetur rem ad corporis excepturi, ipsa deleniti, voluptatum
+          dolorum recusandae voluptatibus sequi minima ipsum unde itaque maxime
+          quaerat iusto, reiciendis quam. Lorem, ipsum dolor sit amet
+          consectetur adipisicing elit. Neque in quam, vitae non consequuntur
+          harum veritatis quasi iste dolorem. Quidem libero suscipit reiciendis
+          odit cumque ut. Aliquid quos est facere.
+        </p>
       </div>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
+      <div className="h-[60vh] relative">
         <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          src={originsImg}
+          alt="Aerial view of Grandview Hotel and Suites"
+          fill
+          style={{ objectFit: "cover" }}
         />
       </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
+      <div className="px-8 py-16 text-slate-600 flex flex-col md:flex-row md:justify-around md:items-center">
+        <div className="md:w-[45%]">
+          <h1 className="font-cinzelDec -tracking-[0.1em] text-center md:text-left">
+            FITNESS AND WELLNESS
+          </h1>
+          <p className="font-sans mt-3 text-center md:text-left">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+            explicabo sequi laboriosam illo, perspiciatis commodi aperiam ex
+            ducimus similique, iure non autem, quisquam doloribus soluta
+            mollitia est dolores ratione cupiditate? Lorem ipsum dolor sit, amet
+            consectetur adipisicing elit. Tenetur maxime cumque sunt eos facilis
+            exercitationem quos debitis, eius sint nesciunt temporibus veritatis
+            omnis molestiae, labore enim dolor dolorum ex voluptas.
           </p>
-        </a>
+          <div className="my-3"></div>
+          <p className="font-sans text-center md:text-left">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Consequatur consectetur rem ad corporis excepturi, ipsa deleniti,
+            voluptatum dolorum recusandae voluptatibus sequi minima ipsum unde
+            itaque maxime quaerat iusto, reiciendis quam. Lorem, ipsum dolor sit
+            amet consectetur adipisicing elit. Neque in quam, vitae non
+            consequuntur harum veritatis quasi iste dolorem. Quidem libero
+            suscipit reiciendis odit cumque ut. Aliquid quos est facere.
+          </p>
+        </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+        <div className="h-[60vh] relative mt-10 md:w-[45%]">
+          <Image
+            src={fitnessImg}
+            alt="Aerial view of Grandview Hotel and Suites"
+            fill
+            style={{ objectFit: "cover" }}
+          />
+        </div>
       </div>
-    </main>
+
+      <div className="px-8 md:px-0 py-16 text-slate-600 flex flex-col md:flex-row-reverse md:justify-between md:items-center">
+        <div className="md:w-[10%]"></div>
+        <div className="md:w-[55%]">
+          <h1 className="font-cinzelDec -tracking-[0.1em] text-center md:text-left">
+            CULINARY
+          </h1>
+          <p className="font-sans mt-3 text-center md:text-left">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+            explicabo sequi laboriosam illo, perspiciatis commodi aperiam ex
+            ducimus similique, iure non autem, quisquam doloribus soluta
+            mollitia est dolores ratione cupiditate? Lorem ipsum dolor sit, amet
+            consectetur adipisicing elit. Tenetur maxime cumque sunt eos facilis
+            exercitationem quos debitis, eius sint nesciunt temporibus veritatis
+            omnis molestiae, labore enim dolor dolorum ex voluptas.
+          </p>
+          <div className="my-3"></div>
+          <p className="font-sans text-center md:text-left">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Consequatur consectetur rem ad corporis excepturi, ipsa deleniti,
+            voluptatum dolorum recusandae voluptatibus sequi minima ipsum unde
+            itaque maxime quaerat iusto, reiciendis quam. Lorem, ipsum dolor sit
+            amet consectetur adipisicing elit. Neque in quam, vitae non
+            consequuntur harum veritatis quasi iste dolorem. Quidem libero
+            suscipit reiciendis odit cumque ut. Aliquid quos est facere.
+          </p>
+        </div>
+
+        <div className="h-[60vh] md:h-[100vh] relative mt-10 md:w-[30%]">
+          <Image
+            src={culinaryImg}
+            alt="Aerial view of Grandview Hotel and Suites"
+            fill
+            style={{ objectFit: "cover" }}
+          />
+        </div>
+      </div>
+
+      <div className="text-slate-600 flex flex-col justify-center items-center px-10 py-16">
+        <h1 className="font-cinzelDec -tracking-[0.1em] text-center md:text-left">
+          ADVENTURES AND EVENTS
+        </h1>
+        <p className="font-sans mt-3 text-center">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+          explicabo sequi laboriosam illo, perspiciatis commodi aperiam ex
+          ducimus similique, iure non autem, quisquam doloribus soluta mollitia
+          est dolores ratione cupiditate? Lorem ipsum dolor sit, amet
+          consectetur adipisicing elit. Tenetur maxime cumque sunt eos facilis
+          exercitationem quos debitis, eius sint nesciunt temporibus veritatis
+          omnis molestiae, labore enim dolor dolorum ex voluptas.
+        </p>
+        <div className="my-3"></div>
+        <p className="font-sans text-center">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur
+          consectetur rem ad corporis excepturi, ipsa deleniti, voluptatum
+          dolorum recusandae voluptatibus sequi minima ipsum unde itaque maxime
+          quaerat iusto, reiciendis quam. Lorem, ipsum dolor sit amet
+          consectetur adipisicing elit. Neque in quam, vitae non consequuntur
+          harum veritatis quasi iste dolorem. Quidem libero suscipit reiciendis
+          odit cumque ut. Aliquid quos est facere.
+        </p>
+      </div>
+
+      <div className="h-[60vh] relative">
+        <Image
+          src={adventureImg}
+          alt="Aerial view of Grandview Hotel and Suites"
+          fill
+          style={{ objectFit: "cover" }}
+        />
+      </div>
+
+      <div className="px-10 py-16 text-slate-600 flex flex-col items-center justify-center">
+        <h1 className="font-cinzelDec -tracking-[0.1em]">CONTACT US</h1>
+        <p className="font-sans text-center mt-3">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur
+          consectetur rem ad corporis excepturi, ipsa deleniti, voluptatum
+          dolorum recusandae voluptatibus sequi minima ipsum unde itaque maxime
+          quaerat iusto, reiciendis quam.
+        </p>
+        <Link
+          href="#"
+          className="font-cinzelDec p-3 mr-3 hover:bg-black/10 border-b border-slate-600 text-lg flex items-center my-2 transition-all"
+        >
+          <p>CONTACT US</p>
+          <svg
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+            className="ml-1"
+            height="16"
+            width="16"
+          >
+            <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" />
+          </svg>
+        </Link>
+      </div>
+
+      <Footer />
+    </>
   );
 }
